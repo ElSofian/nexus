@@ -85,7 +85,7 @@ module.exports = {
         if (executorGradeIndex === -1) return errorEmbed("Votre grade actuel est invalide.", false, "editReply");
         if (targetGradeIndex === -1) return errorEmbed("Le grade cible est invalide.", false, "editReply");
 
-        if (executorGradeIndex <= targetGradeIndex)
+        if (executorGradeIndex >= targetGradeIndex)
             return errorEmbed(`Vous ne pouvez pas recruter cet employé au grade **${grade}** car votre grade actuel (**${executorData.grade}**) est en dessous ou au même niveau.`, false, "editReply");
 
         try {
